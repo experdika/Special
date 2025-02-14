@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For My Special Someone</title>
+    <title>Valentine's Day Surprise</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
             text-align: center;
-            background: linear-gradient(to right, #ff758c, #ff7eb3);
-            color: white;
+            background: #ffd1dc;
+            color: #ff1493;
             margin: 0;
             padding: 20px;
         }
         .container {
-            max-width: 600px;
+            max-width: 500px;
             margin: auto;
-            background: rgba(255, 255, 255, 0.2);
+            background: white;
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -24,22 +24,24 @@
         h1 {
             font-size: 2em;
         }
-        .gallery img {
-            width: 100px;
-            height: 100px;
-            margin: 10px;
-            border-radius: 10px;
+        .heart {
+            font-size: 50px;
+            color: red;
         }
-        .hidden-message {
-            display: none;
-            font-size: 1.2em;
-            margin-top: 20px;
+        .message-box {
+            width: 100%;
+            height: 100px;
+            border: 2px solid #ff1493;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 1em;
         }
         button {
-            background: white;
+            background: #ff69b4;
             border: none;
             padding: 10px 20px;
             font-size: 1em;
+            color: white;
             margin-top: 20px;
             cursor: pointer;
             border-radius: 10px;
@@ -48,20 +50,10 @@
 </head>
 <body>
     <div class="container">
-        <h1>Happy Valentine's Day ❤️</h1>
-        <p>To the most special person in my life, this is just a small token of my love for you.</p>
-        <div class="gallery">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjEKHLPcseUCs1m7JLI5hiE3iDsZ8J7SCngw&s" alt="Photo 1">
-            <img src="https://via.placeholder.com/100" alt="Photo 2">
-            <img src="https://via.placeholder.com/100" alt="Photo 3">
-        </div>
-        <button onclick="revealMessage()">Click for a Surprise</button>
-        <p class="hidden-message" id="hiddenMessage">You make my world brighter every day! 💖</p>
+        <h1>💖 Happy Valentine's Day 💖</h1>
+        <p>To the most special person in my life, here’s a little love just for you!</p>
+        <textarea class="message-box" placeholder="Tulis kata-kata manismu di sini..."></textarea>
+        <button onclick="alert('Pesanmu telah tersimpan dalam hati! 💕')">Kirim Pesan</button>
     </div>
-    <script>
-        function revealMessage() {
-            document.getElementById('hiddenMessage').style.display = 'block';
-        }
-    </script>
 </body>
 </html>
