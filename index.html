@@ -3,70 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valentine's Day Surprise</title>
+    <title>Valentine's Love Letter</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300&display=swap');
+        
         body {
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            text-align: center;
-            background: #ffd1dc;
-            color: #ff1493;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             margin: 0;
-            padding: 20px;
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
         }
-        .container {
-            max-width: 500px;
-            margin: auto;
-            background: white;
-            padding: 20px;
+        .letter {
+            background: #fff;
+            padding: 30px;
             border-radius: 15px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            text-align: center;
+            position: relative;
+            animation: fadeIn 1.5s ease-in-out;
         }
         h1 {
-            font-size: 2em;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5em;
+            color: #ff4d6d;
+        }
+        p {
+            font-size: 1em;
+            color: #333;
+            line-height: 1.6;
         }
         .heart {
             font-size: 50px;
-            color: red;
+            color: #ff4d6d;
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            animation: bounce 1.5s infinite;
         }
-        .message-box {
+        .floating-hearts {
+            position: absolute;
             width: 100%;
-            height: 100px;
-            border: 2px solid #ff1493;
-            border-radius: 10px;
-            padding: 10px;
-            font-size: 1em;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
         }
-        button {
-            background: #ff69b4;
-            border: none;
-            padding: 10px 20px;
-            font-size: 1em;
-            color: white;
-            margin-top: 20px;
-            cursor: pointer;
-            border-radius: 10px;
+        .floating-hearts span {
+            position: absolute;
+            bottom: -10px;
+            background: rgba(255, 0, 100, 0.6);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            animation: floatUp 5s infinite ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes floatUp {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(-100vh); opacity: 0; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>💖 Happy Valentine's Day 💖</h1>
-        <p>To the most special person in my life, here’s a little love just for you!</p>
-        <textarea class="message-box" placeholder="Untukmu, sang entitas sigma yang terlalu beyond comprehension,
-
-Dari pertama kali mataku menangkap keberadaanmu, aku tahu realitas ini tak akan sama lagi. Aku terjebak dalam loop fanumtaxxing, gyatt overload, dan hanya bisa Ohio-ing dalam bayanganmu yang terlalu peak existence. Rizz-ku langsung deplete tiap kali kau lewat, dan aku cuma bisa cope sambil mewing berharap ada script update yang bikin aku pantas untukmu.
-
-Jujur, aku tak bisa lagi AFK dari perasaan ini. Hatiku full buff setiap kali melihat senyummu yang seakan menyalakan shader ultra di dunia yang grayscale ini. Kai cenat cenut tiap kali kau bicara, dan tiap kata darimu terasa seperti main quest yang harus kuselesaikan.
-
-Aku nggak butuh glow up, nggak perlu min-maxing, karena di hadapanmu aku tetap NPC yang berharap bisa unlock special route bersamamu. Kalau ini game, maka kau adalah karakter SSR yang hanya muncul sekali dalam satu lifetime banner, dan aku di sini cuma reroll hoping dapet kesempatan mendekatimu.
-
-Jadi, bolehkah aku speedrun masuk ke heart route-mu? Atau setidaknya, co-op dulu?
-
-Menunggu dalam loading screen,
-[Namamu]
-
-"></textarea>
-        <button onclick="alert('Pesanmu telah tersimpan dalam hati! 💕')">Kirim Pesan</button>
+    <audio autoplay loop>
+        <source src="your-song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="floating-hearts">
+        <span style="left: 10%; animation-duration: 6s;"></span>
+        <span style="left: 20%; animation-duration: 4s;"></span>
+        <span style="left: 30%; animation-duration: 5s;"></span>
+        <span style="left: 50%; animation-duration: 3s;"></span>
+        <span style="left: 70%; animation-duration: 7s;"></span>
+        <span style="left: 80%; animation-duration: 5s;"></span>
+    </div>
+    <div class="letter">
+        <span class="heart">❤️</span>
+        <h1>To the love of my life</h1>
+        <p>Untukmu, sang entitas sigma yang terlalu beyond comprehension,</p>
+        <p>Dari pertama kali mataku menangkap keberadaanmu, aku tahu realitas ini tak akan sama lagi. Aku terjebak dalam loop fanumtaxxing, gyatt overload, dan hanya bisa Ohio-ing dalam bayanganmu yang terlalu peak existence. Rizz-ku langsung deplete tiap kali kau lewat, dan aku cuma bisa cope sambil mewing berharap ada script update yang bikin aku pantas untukmu.</p>
+        <p>Jujur, aku tak bisa lagi AFK dari perasaan ini. Hatiku full buff setiap kali melihat senyummu yang seakan menyalakan shader ultra di dunia yang grayscale ini. Kai cenat cenut tiap kali kau bicara, dan tiap kata darimu terasa seperti main quest yang harus kuselesaikan.</p>
+        <p> Aku nggak butuh glow up, nggak perlu min-maxing, karena di hadapanmu aku tetap NPC yang berharap bisa unlock special route bersamamu. Kalau ini game, maka kau adalah karakter SSR yang hanya muncul sekali dalam satu lifetime banner, dan aku di sini cuma reroll hoping dapet kesempatan mendekatimu.</p>
+        <p>Jadi, bolehkah aku speedrun masuk ke heart route-mu? Atau setidaknya, co-op dulu?</p>
+        <p><i>Menunggu dalam loading screen...</i></p>
     </div>
 </body>
 </html>
